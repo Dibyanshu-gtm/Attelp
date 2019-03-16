@@ -16,24 +16,42 @@ For Student:
 
 
 Registration No: 17BCE1328
-Password: Cristiano@7   //I am a CR7 fan 
+Password: Cristiano@7   
+//I am a CR7 fan 
+
+
 
 For Teachers:
 
 Teacher ID: TEA1001
+
+
 Password: b
 
 Teacher ID: TEA1002
+
+
 Password: c
 
 
 The Techinical Specifications for the Project.
 
 XAMMP Version:  7.3.0 (for Windows)
+
+
+
 My System:
+
+
 Lenevo Ideapad 110
+
+
 Processor: AMD A8-7410 APU with AMD Radeon R5 Graphics (2.20 Ghz)
+
+
 RAM: 4.00 GB (3.41 GB usable)
+
+
 Type: 64-bit Operating System, x64-based processor
 OS: Windows 10 Home
 
