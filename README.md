@@ -1,7 +1,7 @@
 # Attelp
 Attelp is my web development project which is based on the simple idea of helping students and teachers to take and monitor their attendances.
 
-It was a part of my college project where we had to design a website that actually helps in the regular functioning of daily school/college life. The major modules that are used in this project is basically HTML,CSS,PHP and some bit of JSON as well.
+It was a part of my college project where we had to design a website that actually helps in the regular functioning of daily school/college life. The major modules that are used in this project is basically HTML,CSS,PHP,Javascript and some bit of JSON as well.
 It is really an intresting project for me. I have also used Chart.js implementation in this project which is licensed ny MIT(Check js directory for the Chart.min.js file and the related license details) .
 
 For proper working  just use the following steps
