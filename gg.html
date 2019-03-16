@@ -1,0 +1,104 @@
+<html>
+<head>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+
+<style type="text/css">
+
+
+#chart-container {
+    width: 50%;
+    height: auto;
+	background-color:white;
+	margin-top:20px;
+}
+</style>
+</head>
+
+
+
+
+
+
+<body>
+<div id="chart-container">
+        <canvas id="graphCanvas"></canvas>
+		yoiyoy
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            showGraph();
+        });
+
+
+        function showGraph()
+        {
+            {
+                $.post("data.php",
+                function (data)
+                {
+                    console.log(data);
+                     var subject = [];
+                    var attendance= [];
+
+                    for (var i in data) {
+                        subject.push(data[i].subid);
+                        attendance.push(data[i].at);
+                    }
+
+                    var chartdata = {
+                        labels: subject,
+                        datasets: [
+                            {
+                                label: 'Student Attendance',
+                                backgroundColor: '#49e2ff',
+                                borderColor: '#46d5f1',
+                                hoverBackgroundColor: '#CCCCCC',
+                                hoverBorderColor: '#666666',
+                                data: attendance
+                            }
+                        ]
+                    };
+
+                    var graphTarget = $("#graphCanvas");
+
+                    var barGraph = new Chart(graphTarget, {
+                        type: 'bar',
+                        data: chartdata,
+						options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fixedStepSize: 5,
+                        max: 100,
+                        min: 0
+                    },
+                    gridLines: {
+                        color: 'black',
+                        zeroLineColor: 'black',
+                        zeroLineWidth: 4
+                    }
+                }],
+                xAxes: [{
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                  barPercentage: 1.0,
+                        categoryPercentage: 0.1
+                }]
+            }
+        }
+                    });
+                });
+            }
+        }
+        </script>
+
+
+</body>
+</html>
